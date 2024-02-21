@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'North Regular';
+  src: url('../img/North-Regular.woff');
+};
+
 a {
   color: $primary;
   &:hover,
@@ -53,5 +58,25 @@ a {
 }
 
 .img-fix {
-  height: 455px;
+  height: 100%;
+  width: auto;
+  max-height: 456px;
+}
+.bg-slate {
+  background-color: slateblue;
+}
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.projects {
+  display: flex;
+}
+.project {
+  width: 50%;
+  height: 300px;
+  overflow: hidden;
+}
+#sidebar-wrapper.active {
+  background: #1d809f;
 }

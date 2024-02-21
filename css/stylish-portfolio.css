@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Stylish Portfolio v4.0.0-beta.2 (https://startbootstrap.com/template-overviews/stylish-portfolio)
- * Copyright 2013-2017 Start Bootstrap
+ * Copyright 2013-2024 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/blob/master/LICENSE)
  */
 body,
@@ -9,7 +9,7 @@ html {
   height: 100%; }
 
 body {
-  font-family: 'Source Sans Pro'; }
+  font-family: 'North Regular'; }
 
 .btn-xl {
   padding: 1.25rem 2.5rem; }
@@ -73,7 +73,7 @@ h6 {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/bg-masthead.jpg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/dunes.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -92,21 +92,21 @@ h6 {
   position: fixed;
   z-index: 2;
   right: 0;
-  width: 250px;
+  width: 350px;
   height: 100%;
   -webkit-transition: all 0.4s ease 0s;
   -moz-transition: all 0.4s ease 0s;
   -ms-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
-  transform: translateX(250px);
-  background: #1D809F;
+  transform: translateX(350px);
+  background: slateblue;
   border-left: 1px solid rgba(255, 255, 255, 0.1); }
 
 .sidebar-nav {
   position: absolute;
   top: 0;
-  width: 250px;
+  width: 350px;
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -143,8 +143,8 @@ h6 {
   background: none; }
 
 #sidebar-wrapper.active {
-  right: 250px;
-  width: 250px;
+  right: 350px;
+  width: 350px;
   -webkit-transition: all 0.4s ease 0s;
   -moz-transition: all 0.4s ease 0s;
   -ms-transition: all 0.4s ease 0s;
@@ -169,7 +169,7 @@ h6 {
 
 .service-icon {
   background-color: #fff;
-  color: #1D809F;
+  color: slateblue;
   height: 7rem;
   width: 7rem;
   display: block;
@@ -192,7 +192,7 @@ h6 {
 .portfolio-item {
   display: block;
   position: relative;
-  overflow: auto;
+  overflow: hidden;
   max-width: 530px;
   margin: auto auto 1rem; }
   .portfolio-item .caption {
@@ -206,8 +206,7 @@ h6 {
     z-index: 1; }
     .portfolio-item .caption .caption-content {
       color: #fff;
-      margin: auto 2rem 2rem; 
-    top: 10px;}
+      margin: auto 2rem 2rem; }
       .portfolio-item .caption .caption-content h2 {
         font-size: 0.8rem;
         text-transform: uppercase; }
@@ -235,7 +234,7 @@ h6 {
         -webkit-clip-path: inset(2rem);
         clip-path: inset(2rem); }
       .portfolio-item:hover .caption {
-        background-color: rgba(29, 128, 159, 0.9);
+        background-color: rgba(106, 90, 205, 0.9);
         -webkit-clip-path: inset(2rem);
         clip-path: inset(2rem); } }
 
@@ -248,25 +247,29 @@ footer.footer {
     width: 4rem;
     line-height: 4.3rem;
     font-size: 1.5rem;
-    background-color: #1D809F;
+    background-color: slateblue;
     transition: background-color 0.15s ease-in-out;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1); }
     footer.footer .social-link:hover {
-      background-color: #155d74;
+      background-color: #4b39bb;
       text-decoration: none; }
 
+@font-face {
+  font-family: 'North Regular';
+  src: url("../img/North-Regular.woff"); }
+
 a {
-  color: #1D809F; }
+  color: slateblue; }
   a:hover, a:focus, a:active {
-    color: #155d74; }
+    color: #4b39bb; }
 
 .btn-primary {
-  background-color: #1D809F !important;
-  border-color: #1D809F !important;
+  background-color: slateblue !important;
+  border-color: slateblue !important;
   color: #fff !important; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background-color: #155d74 !important;
-    border-color: #155d74 !important; }
+    background-color: #4b39bb !important;
+    border-color: #4b39bb !important; }
 
 .btn-secondary {
   background-color: #ecb807 !important;
@@ -284,14 +287,33 @@ a {
   font-weight: 700; }
 
 .bg-primary {
-  background-color: #1D809F !important; }
+  background-color: slateblue !important; }
 
 .text-primary {
-  color: #1D809F !important; }
+  color: slateblue !important; }
 
 .text-secondary {
   color: #ecb807 !important; }
-.skills-header {
-  margin-bottom: 20px!important;
-}
-@media(max-width:440px){.email-btn{font-size:.8rem!important;height:auto!important;word-wrap:break-word!important}.name-header{font-size:2.6rem!important;}}
+
+.img-fix {
+  height: 100%;
+  width: auto;
+  max-height: 456px; }
+
+.bg-slate {
+  background-color: slateblue; }
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300; }
+
+.projects {
+  display: flex; }
+
+.project {
+  width: 50%;
+  height: 300px;
+  overflow: hidden; }
+
+#sidebar-wrapper.active {
+  background: #1d809f; }
