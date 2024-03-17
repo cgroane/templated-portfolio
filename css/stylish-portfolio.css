@@ -312,11 +312,13 @@ a {
 
 .project {
   width: 50%;
-  height: 100%;
   overflow: hidden; }
 
 #sidebar-wrapper.active {
   background: #1d809f; }
+
+.portfolio-item .caption .caption-content {
+  margin: 2rem; }
 
 @media only screen and (max-width: 1200px) {
   .container {
@@ -324,7 +326,8 @@ a {
 
 @media only screen and (max-width: 1000px) {
   .project {
-    width: 100%; } }
+    width: 100%;
+    max-height: 22rem; } }
 
 @media only screen and (max-width: 475px) {
   .email-btn {
