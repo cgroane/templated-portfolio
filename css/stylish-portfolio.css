@@ -101,7 +101,8 @@ h6 {
   transition: all 0.4s ease 0s;
   transform: translateX(350px);
   background: slateblue;
-  border-left: 1px solid rgba(255, 255, 255, 0.1); }
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #343a40; }
 
 .sidebar-nav {
   position: absolute;
@@ -149,7 +150,8 @@ h6 {
   -moz-transition: all 0.4s ease 0s;
   -ms-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s; }
+  transition: all 0.4s ease 0s;
+  box-shadow: -4px 0 20px -7px black; }
 
 .menu-toggle {
   position: fixed;
@@ -314,14 +316,18 @@ a {
   width: 50%;
   overflow: hidden; }
 
-#sidebar-wrapper.active {
-  background: #1d809f; }
-
 .portfolio-item .caption .caption-content {
   margin: 1rem; }
 
 .portfolio-item .caption {
-  background: rgba(0, 0, 0, 0.4); }
+  background: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.3s linear; }
+  .portfolio-item .caption .span-content {
+    transition: opacity 0.3s linear; }
+  .portfolio-item .caption:hover {
+    opacity: 0; }
+    .portfolio-item .caption:hover .span-content {
+      opacity: 0; }
 
 @media only screen and (max-width: 1200px) {
   .container {
