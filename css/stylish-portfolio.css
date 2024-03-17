@@ -318,7 +318,10 @@ a {
   background: #1d809f; }
 
 .portfolio-item .caption .caption-content {
-  margin: 2rem; }
+  margin: 1rem; }
+
+.portfolio-item .caption {
+  background: rgba(0, 0, 0, 0.4); }
 
 @media only screen and (max-width: 1200px) {
   .container {
