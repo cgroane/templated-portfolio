@@ -40,13 +40,15 @@
         margin-bottom: 5rem;
       }
     }
-    img {
+    div.img-fluid {
       -webkit-transition: -webkit-clip-path 0.25s ease-out;
       -webkit-clip-path: inset(-1px);
       clip-path: inset(-1px);
+      height: 100%;
+      background-size: cover;
     }
     &:hover {
-      img {
+      div.img-fluid {
         -webkit-clip-path: inset(2rem);
         clip-path: inset(2rem);
       }

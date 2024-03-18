@@ -228,11 +228,13 @@ h6 {
           margin-left: 5rem;
           margin-right: 5rem;
           margin-bottom: 5rem; }
-      .portfolio-item img {
+      .portfolio-item div.img-fluid {
         -webkit-transition: -webkit-clip-path 0.25s ease-out;
         -webkit-clip-path: inset(-1px);
-        clip-path: inset(-1px); }
-      .portfolio-item:hover img {
+        clip-path: inset(-1px);
+        height: 100%;
+        background-size: cover; }
+      .portfolio-item:hover div.img-fluid {
         -webkit-clip-path: inset(2rem);
         clip-path: inset(2rem); }
       .portfolio-item:hover .caption {
@@ -299,7 +301,9 @@ a {
 
 .img-fix {
   width: auto;
-  max-height: 456px; }
+  max-height: 456px;
+  background-size: cover;
+  height: 100%; }
 
 .bg-slate {
   background-color: slateblue; }
@@ -315,6 +319,9 @@ a {
   width: 50%;
   overflow: hidden; }
 
+a.portfolio-item {
+  height: 100%; }
+
 .portfolio-item .caption .caption-content {
   margin: 1rem; }
 
@@ -328,6 +335,9 @@ a {
     .portfolio-item .caption:hover .span-content {
       opacity: 0; }
 
+.col-lg-6.project {
+  height: 320px; }
+
 @media only screen and (max-width: 1200px) {
   .container {
     max-width: 90%; } }
@@ -335,7 +345,8 @@ a {
 @media only screen and (max-width: 1000px) {
   .project {
     width: 100%;
-    max-height: 22rem; } }
+    max-height: 22rem;
+    margin-bottom: 1rem; } }
 
 @media only screen and (max-width: 475px) {
   .email-btn {

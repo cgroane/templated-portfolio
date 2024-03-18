@@ -60,6 +60,8 @@ a {
 .img-fix {
   width: auto;
   max-height: 456px;
+  background-size: cover;
+  height: 100%;
 }
 .bg-slate {
   background-color: slateblue;
@@ -74,6 +76,9 @@ a {
 .project {
   width: 50%;
   overflow: hidden;
+}
+a.portfolio-item {
+  height: 100%;
 }
 .portfolio-item .caption .caption-content {
   margin: 1rem;
@@ -91,6 +96,9 @@ a {
     }
   }
 }
+.col-lg-6.project {
+  height: 320px;
+}
 @media only screen and (max-width: 1200px) {
   .container {
     max-width: 90%;
@@ -100,6 +108,7 @@ a {
   .project {
     width: 100%;
     max-height: 22rem;
+    margin-bottom: 1rem;
   }
 }
 @media only screen and (max-width: 475px) {
