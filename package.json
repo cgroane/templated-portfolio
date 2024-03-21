@@ -42,6 +42,9 @@
     "gulp-uglify": "3.0.0"
   },
   "main": "gulpfile.js",
+  "engines": {
+    "node": "<=8.10.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp dev",
