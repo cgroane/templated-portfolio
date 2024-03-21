@@ -48,7 +48,7 @@ jobs:
           name: Deploy
           command: |
             if [ $CIRCLE_BRANCH = 'circleci-project-setup' ]; then
-              aws s3 sync --include "*" --exclude "node_modules" s3://connorgroane.com --delete --exact-timestamps;
+              aws s3 sync "*" s3://connorgroane.com --delete --exact-timestamps;
             fi
 workflows:
   build_and_deploy:
