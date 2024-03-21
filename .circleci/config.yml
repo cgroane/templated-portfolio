@@ -3,6 +3,7 @@
 version: 2.1
 orbs:
   node: circleci/node@5
+  aws-s3: circleci/aws-s3@4.0.0
 jobs:
   build:
     working_directory: ~/repo
@@ -24,10 +25,13 @@ jobs:
           paths:
             - node_modules
       - run:
+          name: SASS
+          command: npm run sass
+      - run:
           name: Build
           command: |
             if [ $CIRCLE_BRANCH = 'circleci-project-setup' ]; then
-              npm start
+              npm run run
             fi
       - persist_to_workspace:
           root: .
@@ -44,7 +48,7 @@ jobs:
           name: Deploy
           command: |
             if [ $CIRCLE_BRANCH = 'circleci-project-setup' ]; then
-              aws s3 sync build arn:aws:s3:::connorgroane.com --delete --exact-timestamps;
+              aws s3 sync ~/repo s3://connorgroane.com --delete --exact-timestamps;
             fi
 workflows:
   build_and_deploy:
