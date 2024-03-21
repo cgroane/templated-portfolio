@@ -24,6 +24,9 @@ jobs:
           paths:
             - node_modules
       - run:
+          name: SASS
+          command: npm run sass
+      - run:
           name: Build
           command: |
             if [ $CIRCLE_BRANCH = 'circleci-project-setup' ]; then
