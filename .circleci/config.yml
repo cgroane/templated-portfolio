@@ -47,7 +47,7 @@ jobs:
       - run:
           name: Deploy
           command: |
-            if [ $CIRCLE_BRANCH = 'circleci-project-setup' ]; then
+            if [ $CIRCLE_BRANCH = 'master' ]; then
               aws s3 sync ~/repo s3://connorgroane.com --delete --exact-timestamps;
             fi
 workflows:
@@ -57,11 +57,11 @@ workflows:
           filters:
             branches:
               only:
-                - circleci-project-setup
+                - master
       - deploy:
           requires:
             - build
           filters:
             branches:
               only:
-                - circleci-project-setup
+                - master
